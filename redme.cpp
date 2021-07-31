@@ -1,13 +1,19 @@
-#include <iostream>
-#include <string>
-#include <vector>
-#include <conio.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 void readmeGenerator(vector<string>readme){
    for(int i=0;i<readme.size();i++) {
       cout << readme[i] << endl;
    }
+}
+
+void write(vector<string> v){
+	ofstream file;
+	file.open("rajivkifile.txt");
+	for(int i=0;i<v.size();++i){
+		file<<v[i]<<endl;
+	}
+	file.close();
 }
 
 int main(){
@@ -27,7 +33,14 @@ cin.tie(NULL);
         readme.push_back(nameline);
         // name section ends
 
-        
+        write(readme);
+	// ofstream file;
+	// file.open("text.txt");
+	// for(int i=0;i<v.size();++i){
+	// 	file<<v[i]<<endl;
+	// }
+	// file.close();
+
 
       // add profile views section starts
         string githubUserName;
